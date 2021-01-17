@@ -37,6 +37,6 @@ public class TodolistService {
 	
 	private List<Task> getAllTasks() {
 		return ((List<Task>) taskRepository.findAll()).stream().collect(Collectors.toList());
-	}
+	}	
 
 }

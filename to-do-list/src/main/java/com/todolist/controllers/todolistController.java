@@ -6,7 +6,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,9 +21,7 @@ public class todolistController {
 	private TodolistService todolistService;
 
     @GetMapping("/todolist")
-    @ResponseBody
     public List<TodolistDTO> getAll() {
-    	List<TodolistDTO> todolists = todolistService.getAll();
-    	return todolists;
+    	return todolistService.getAll();
     }
 }

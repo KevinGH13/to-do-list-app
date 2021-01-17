@@ -7,7 +7,7 @@
                         <div class="form-group">
                             <input type="text" name="listName" class="form-control mx-sm-3" id="listName" placeholder="Nombre de la lista">
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2">Crear lista</button>
+                        <button (click)="createList()" type="submit" class="btn btn-primary mb-2">Crear lista</button>
                     </form>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                         <div class="form-group">
                             <input type="text" name="" class="form-control mx-sm-3" placeholder="¿Qué deseas hacer?">
                         </div>
-                        <button type="submit" class="btn btn-primary mb-2">Crear Tarea</button>
+                        <button (click)="createTask()" type="submit" class="btn btn-primary mb-2">Crear Tarea</button>
                     </form>
                 </div>
                 <hr>

@@ -7,5 +7,4 @@ import com.todolist.entities.Lists;
 
 @Repository
 public interface ListRepository extends CrudRepository<Lists, Integer> {
-
 }

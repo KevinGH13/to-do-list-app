@@ -1,5 +1,5 @@
-export interface taskModel {
-    id: string;
+export interface TaskModel {
+    id: null;
     name: string;
     complete: string;
 }

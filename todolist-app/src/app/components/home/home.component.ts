@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { TodolistService } from '../../services/todolist.service';
 import { Util } from '../../util/util';
 import { Router } from '@angular/router';
+import { TaskService } from 'src/app/services/task.service';
+import { ListService } from 'src/app/services/list.service';
+import { ListModel } from '../../model/list-model';
+import { TaskModel } from "../../model/task-model";
 
 @Component({
   selector: 'app-home',
@@ -13,7 +17,7 @@ export class HomeComponent implements OnInit {
   listTodolist: any[] = [];
   util: Util = new Util();
 
-  constructor(private todolistService: TodolistService, private router: Router) {
+  constructor(private todolistService: TodolistService, private taskService: TaskService, private listService: ListService, private router: Router) {
     this.getTodolist();
   }
 
@@ -25,6 +29,21 @@ export class HomeComponent implements OnInit {
       .subscribe(response => {
         console.log(response)
         this.listTodolist = Object.values(response);
+      })
+  }
+
+  createList() {
+    this.listService.createList()
+      .subscribe(response => {
+        console.log(response)
+        console.log("Lista creada");
+      })
+  }
+
+  createTask() {
+    this.taskService.createList()
+      .subscribe(response => {
+        console.log("Lista creada");
       })
   }
 

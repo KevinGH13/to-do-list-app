@@ -22,7 +22,7 @@ export class TodolistService {
     }
 
     getTodolist(): Observable<TodolistModel> {
-        return this.httpClient.get<TodolistModel>(this.util.baseURL)
+        return this.httpClient.get<TodolistModel>(this.util.baseURL + "/todolist")
             .pipe(catchError(error => {
                 return throwError(error);
             }));

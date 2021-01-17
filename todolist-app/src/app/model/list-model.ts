@@ -1,4 +1,4 @@
-export interface listModel {
-    id: string;
+export interface ListModel {
+    id: null;
     name: string;
 }
