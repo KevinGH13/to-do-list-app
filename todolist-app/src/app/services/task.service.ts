@@ -14,11 +14,11 @@ export class TaskService {
 
 
     createList() {
-        return this.httpClient.post<TaskModel>(this.util.baseURL + '/task', this.task);
+        return this.httpClient.post<TaskModel>(this.util.baseURL + '/task', JSON.stringify(this.task));
     }
 
     deleteList() {
-        return this.httpClient.delete<TaskModel>(this.util.baseURL + '/task/' + this.task.id);
+        return this.httpClient.delete<TaskModel>(this.util.baseURL + '/task/' + JSON.stringify(this.task.id));
     }
 
 }

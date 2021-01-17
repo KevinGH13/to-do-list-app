@@ -4,8 +4,6 @@ import { Util } from '../../util/util';
 import { Router } from '@angular/router';
 import { TaskService } from 'src/app/services/task.service';
 import { ListService } from 'src/app/services/list.service';
-import { ListModel } from '../../model/list-model';
-import { TaskModel } from "../../model/task-model";
 
 @Component({
   selector: 'app-home',
