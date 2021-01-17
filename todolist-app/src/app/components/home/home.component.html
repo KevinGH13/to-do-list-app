@@ -1,0 +1,56 @@
+<section>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" name="listName" class="form-control mx-sm-3" id="listName" placeholder="Nombre de la lista">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Crear lista</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div *ngFor="let todolist of listTodolist" class="card-header">
+            <div class="card-body">
+                <h5 class="card-title">{{ todolist.nameList }}</h5>
+                <hr>
+                <div class="row">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <input type="text" name="" class="form-control mx-sm-3" placeholder="¿Qué deseas hacer?">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Crear Tarea</button>
+                    </form>
+                </div>
+                <hr>
+                <table class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="row">ID</th>
+                                <th scope="row">Tarea</th>
+                                <th scope="row">Estado</th>
+                                <th scope="row">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let tasks of todolist.tasks">
+                            <th scope="row"> {{tasks.id}} </th>
+                            <th> {{ tasks.name }}</th>
+                            <th> <input class="form-check-input" type="checkbox" value="" id="Status"> </th>
+                            <th>
+                                <button type="submit" class="btn btn-primary mb-2">Eliminar</button>
+                                <button type="submit" class="btn btn-primary mb-2">Editar</button>
+                            </th>
+                        </tbody>
+                    </table>
+                </table>
+            </div>
+            <br>
+        </div>
+        <br>
+    </div>
+    <br>
+</section>
